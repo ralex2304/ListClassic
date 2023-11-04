@@ -1,0 +1,91 @@
+\doxysection{list.\+h}
+\hypertarget{list_8h_source}{}\label{list_8h_source}\index{src/list.h@{src/list.h}}
+\mbox{\hyperlink{list_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00001}00001\ \textcolor{preprocessor}{\#ifndef\ LIST\_H\_}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ LIST\_H\_}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <ctype.h>}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <assert.h>}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{macros_8h}{utils/macros.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{log_8h}{log/log.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{html_8h}{utils/html.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ptr__valid_8h}{utils/ptr\_valid.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{graph__log_8h}{log/graph\_log.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{list__config_8h}{list\_config.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{dump_8h}{dump.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00023}00023\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_abf0f4ae50eaab0d6ae1d6b58bd48e19e}{list\_ctor}}(\mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00031}00031\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_a1c37e2961f9fcde212a162bf7f140a65}{list\_dtor}}(\mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00042}00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ ptr,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\_t}}\ elem,\ \mbox{\hyperlink{struct_list_node}{ListNode}}**\ inserted\_ptr);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00053}\mbox{\hyperlink{list_8h_a5b991bc98b47e416127cd3bf9f8958c6}{00053}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_a5b991bc98b47e416127cd3bf9f8958c6}{list\_insert\_before}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ ptr,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\_t}}\ elem,\ \mbox{\hyperlink{struct_list_node}{ListNode}}**\ inserted\_ptr)\ \{}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{list_8h_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(list,\ ptr-\/>\mbox{\hyperlink{struct_list_node_a927c9ca1868a6f55ca5c7c2e3e6c0d62}{prev}},\ elem,\ inserted\_ptr);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00065}\mbox{\hyperlink{list_8h_a720beedc3030012b190487c784c25c94}{00065}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_a720beedc3030012b190487c784c25c94}{list\_pushback}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\_t}}\ elem,\ \mbox{\hyperlink{struct_list_node}{ListNode}}**\ inserted\_ptr)\ \{}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{list_8h_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(list,\ list-\/>\mbox{\hyperlink{struct_list_ac9c40d39dbdc778b9ca6264ac889e0b6}{tail}},\ elem,\ inserted\_ptr);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00067}00067\ \}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00077}\mbox{\hyperlink{list_8h_af445a81b64ec536a6cbbf48593e7a144}{00077}}\ \textcolor{keyword}{inline}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_af445a81b64ec536a6cbbf48593e7a144}{list\_pushfront}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\_t}}\ elem,\ \mbox{\hyperlink{struct_list_node}{ListNode}}**\ inserted\_ptr)\ \{}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{list_8h_a5b991bc98b47e416127cd3bf9f8958c6}{list\_insert\_before}}(list,\ list-\/>\mbox{\hyperlink{struct_list_a6c5449b1dd158368840801d0cdc86f5e}{head}},\ elem,\ inserted\_ptr);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00088}00088\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_ad9425a856821bef757338345ab40772d}{list\_delete}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ ptr);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00096}00096\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_ad8ad8ac3a11285829fac2c4e15348eaf}{list\_clear}}(\mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00104}00104\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_ac3a60d10288b6644fecc60698a3f677c}{list\_verify}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_list}{List}}*\ list);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00114}00114\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_af87392ca793af929e03f36ada3040557}{list\_find\_by\_value}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\_t}}\ elem,\ \mbox{\hyperlink{struct_list_node}{ListNode}}**\ ptr);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00124}00124\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_a1d80483635eacd81c0041345ac3de6dd}{list\_logical\_index\_by\_ptr}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ ptr,\ ssize\_t*\ logical\_i);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00133}00133\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_ad2c70c7438bd41ec12cd63929d7df6af}{list\_find\_by\_logical\_index}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_list}{List}}*\ list,\ ssize\_t\ logical\_i,\ \mbox{\hyperlink{struct_list_node}{ListNode}}**\ ptr);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00135}00135\ \textcolor{preprocessor}{\#ifdef\ DEBUG}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00144}00144\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{list_8h_a09fc3161c839fa1f8c4ceed937c7b561}{list\_ctor\_debug}}(\mbox{\hyperlink{struct_list}{List}}*\ list,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_var_code_data}{VarCodeData}}\ var\_data);}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00151}\mbox{\hyperlink{list_8h_af5c5563c9c6f0c47cb75f38a4c572762}{00151}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_CTOR(list)\ list\_ctor\_debug(list,\ VAR\_CODE\_DATA\_PTR(list));}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00158}\mbox{\hyperlink{list_8h_a7c99c9b9d14b3d709980e6665d18cb90}{00158}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_VERIFY(list)\ list\_verify(list)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00165}\mbox{\hyperlink{list_8h_a2a1138fcffdd51f70f025ce59b55d3d0}{00165}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_ASSERT(list)\ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00166}00166\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LIST\_VERIFY(list);\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00167}00167\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LIST\_OK(list,\ res);\ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00168}00168\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00169}00169\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (res\ !=\ list-\/>OK)\(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00170}00170\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ res}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00178}\mbox{\hyperlink{list_8h_a8c7f1eb5f65ba70b67c29452244e8f58}{00178}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_OK(list,\ res)\ \ \ do\ \{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00179}00179\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (res\ !=\ list-\/>OK)\ \{\ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00180}00180\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ list\_print\_error(res);\ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00181}00181\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LIST\_DUMP(list);\ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00182}00182\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \(\backslash\)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00183}00183\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ while\ (0)}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00190}\mbox{\hyperlink{list_8h_a5c6d87ae9b0496fd2f0785a317ea3435}{00190}}\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_DUMP(list)\ list\_dump(list,\ VAR\_CODE\_DATA())}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00192}00192\ \textcolor{preprocessor}{\#else\ }\textcolor{comment}{//<\ \#ifndef\ DEBUG}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00199}00199\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_CTOR(list)\ list\_ctor(list);}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00206}00206\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_VERIFY(list)\ List::OK}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00213}00213\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_ASSERT(list)\ (void)\ 0}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00221}00221\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_OK(list,\ res)\ List::OK}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00228}00228\ \textcolor{preprocessor}{\ \ \ \ \#define\ LIST\_DUMP(list)\ (void)\ 0}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00229}00229\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00230}00230\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//<\ \#ifdef\ DEBUG}}
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{list_8h_source_l00232}00232\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//<\ \#ifndef\ LIST\_H\_}}
+
+\end{DoxyCode}

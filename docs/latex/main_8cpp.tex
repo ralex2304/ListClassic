@@ -1,0 +1,89 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include \"{}log/log.\+h\"{}}\newline
+{\ttfamily \#include \"{}list.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_log_file_data}{Log\+File\+Data}} \mbox{\hyperlink{main_8cpp_a06336a68ce7f0258cc88d5a2bb94e4d3}{log\+\_\+file}} = \{\"{}log\"{}\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{log_8cpp_a14e1237e4072873a2976b48d52b10429}{log\_open\_file}}(\&\mbox{\hyperlink{main_8cpp_a06336a68ce7f0258cc88d5a2bb94e4d3}{log\_file}},\ \textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{struct_list}{List}}\ list\ =\ \{\};}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{list_8h_af5c5563c9c6f0c47cb75f38a4c572762}{LIST\_CTOR}}(\&list);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ inserted\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{list_8h_a5c6d87ae9b0496fd2f0785a317ea3435}{LIST\_DUMP}}(\&list);}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ \textcolor{keyword}{nullptr},\ 0,\ \&inserted);}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ inserted,\ 10,\ \&inserted);}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ middle\ =\ inserted;}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ inserted,\ 20,\ \&inserted);}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{list_8h_a5c6d87ae9b0496fd2f0785a317ea3435}{LIST\_DUMP}}(\&list);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ middle,\ 15,\ \&inserted);}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{list_8h_a5c6d87ae9b0496fd2f0785a317ea3435}{LIST\_DUMP}}(\&list);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ middle,\ 20,\ \&inserted);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{list_8h_a5c6d87ae9b0496fd2f0785a317ea3435}{LIST\_DUMP}}(\&list);}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ middle,\ 50,\ \&inserted);}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ middle,\ 60,\ \&inserted);}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ middle,\ 70,\ \&inserted);}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ inserted,\ 80,\ \&inserted);}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\_insert\_after}}(\&list,\ inserted,\ 90,\ \&inserted);}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{list_8h_af445a81b64ec536a6cbbf48593e7a144}{list\_pushfront}}(\&list,\ -\/10,\ \&inserted);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{list_8h_a5c6d87ae9b0496fd2f0785a317ea3435}{LIST\_DUMP}}(\&list);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{list_8cpp_a1c37e2961f9fcde212a162bf7f140a65}{list\_dtor}}(\&list);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{log_8cpp_a4294d549b20fd1af99c3fbee5cf4dc99}{log\_close\_file}}(\&\mbox{\hyperlink{main_8cpp_a06336a68ce7f0258cc88d5a2bb94e4d3}{log\_file}});}
+\DoxyCodeLine{00042\ \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{list_8h_source_l00151}{LIST\+\_\+\+CTOR}}, \mbox{\hyperlink{list_8cpp_source_l00024}{list\+\_\+dtor()}}, \mbox{\hyperlink{list_8h_source_l00190}{LIST\+\_\+\+DUMP}}, \mbox{\hyperlink{list_8cpp_source_l00144}{list\+\_\+insert\+\_\+after()}}, \mbox{\hyperlink{list_8h_source_l00077}{list\+\_\+pushfront()}}, \mbox{\hyperlink{log_8cpp_source_l00074}{log\+\_\+close\+\_\+file()}}, \mbox{\hyperlink{main_8cpp_source_l00004}{log\+\_\+file}}, and \mbox{\hyperlink{log_8cpp_source_l00026}{log\+\_\+open\+\_\+file()}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a06336a68ce7f0258cc88d5a2bb94e4d3}\label{main_8cpp_a06336a68ce7f0258cc88d5a2bb94e4d3} 
+\index{main.cpp@{main.cpp}!log\_file@{log\_file}}
+\index{log\_file@{log\_file}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{log\_file}{log\_file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_log_file_data}{Log\+File\+Data}} log\+\_\+file = \{\"{}log\"{}\}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{dump_8cpp_source_l00007}{list\+\_\+dump()}}, \mbox{\hyperlink{dump_8cpp_source_l00054}{list\+\_\+dump\+\_\+dot()}}, \mbox{\hyperlink{dump_8cpp_source_l00148}{list\+\_\+print\+\_\+error()}}, \mbox{\hyperlink{log_8cpp_source_l00074}{log\+\_\+close\+\_\+file()}}, \mbox{\hyperlink{log_8cpp_source_l00050}{log\+\_\+create\+\_\+timestamp\+\_\+dir()}}, \mbox{\hyperlink{log_8cpp_source_l00026}{log\+\_\+open\+\_\+file()}}, \mbox{\hyperlink{log_8cpp_source_l00003}{log\+\_\+printf()}}, and \mbox{\hyperlink{main_8cpp_source_l00006}{main()}}.
+
