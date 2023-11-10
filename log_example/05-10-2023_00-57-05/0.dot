@@ -1,0 +1,17 @@
+digraph List{
+    graph [bgcolor="#1f1f1f"];
+    node[color=white, fontcolor="#000000", fontsize=14];
+elem_zero [shape="record", style="filled", fillcolor="#6e7681", color=yellow, label=" head = 0x55f5beafa5c0 | tail = 0x55f5beafa600"];
+elem_0 [shape="record", style="filled", fillcolor="#6e7681", label=" <p>prev = (nil) | {<i>ptr = 0x55f5beafa5c0 |<e>elem = 0} | <n>next = 0x55f5beafa5e0}"];
+elem_1 [shape="record", style="filled", fillcolor="#6e7681", label=" <p>prev = 0x55f5beafa5c0 | {<i>ptr = 0x55f5beafa5e0 |<e>elem = 10} | <n>next = 0x55f5beafa600}"];
+elem_2 [shape="record", style="filled", fillcolor="#6e7681", label=" <p>prev = 0x55f5beafa5e0 | {<i>ptr = 0x55f5beafa600 |<e>elem = 20} | <n>next = (nil)}"];
+elem_zero->elem_0->elem_1->elem_2 [weight=10000, color=transparent, arrowtail=none];
+elem_0:<n>->elem_1:<n> [color=green];
+elem_1:<n>->elem_2:<n> [color=green];
+elem_1:<p>->elem_0:<p> [color=blue];
+elem_2:<p>->elem_1:<p> [color=blue];
+head [shape=rect, label="HEAD", color=yellow, fillcolor="#7293ba",style=filled];
+tail [shape=rect, label="TAIL", color=yellow, fillcolor="#7293ba",style=filled];
+head->tail[weight=100, color=transparent];{rank=same; head; elem_0}
+{rank=same; tail; elem_2}
+}

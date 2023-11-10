@@ -1,0 +1,86 @@
+<pre>
+    list_dump() called from src/main.cpp:13 main
+    list[0x7fffd5a15500] initialised in src/main.cpp:10 main
+    {
+    size           = 0
+    head           = (nil)
+    tail           = (nil)
+        {
+        }
+    }
+</pre>
+<pre>
+    list_dump() called from src/main.cpp:20 main
+    list[0x7fffd5a15500] initialised in src/main.cpp:10 main
+    {
+    size           = 3
+    head           = 0x55f5beafa5c0
+    tail           = 0x55f5beafa600
+        {
+         ptr            | prev           | next           | elem
+         0x55f5beafa5c0 |          (nil) | 0x55f5beafa5e0 | 0
+         0x55f5beafa5e0 | 0x55f5beafa5c0 | 0x55f5beafa600 | 10
+         0x55f5beafa600 | 0x55f5beafa5e0 |          (nil) | 20
+        }
+    }
+</pre>
+<img src="0.svg">
+<pre>
+    list_dump() called from src/main.cpp:24 main
+    list[0x7fffd5a15500] initialised in src/main.cpp:10 main
+    {
+    size           = 4
+    head           = 0x55f5beafa5c0
+    tail           = 0x55f5beafa600
+        {
+         ptr            | prev           | next           | elem
+         0x55f5beafa5c0 |          (nil) | 0x55f5beafa5e0 | 0
+         0x55f5beafa5e0 | 0x55f5beafa5c0 | 0x55f5beafa800 | 10
+         0x55f5beafa800 | 0x55f5beafa5e0 | 0x55f5beafa600 | 15
+         0x55f5beafa600 | 0x55f5beafa800 |          (nil) | 20
+        }
+    }
+</pre>
+<img src="1.svg">
+<pre>
+    list_dump() called from src/main.cpp:28 main
+    list[0x7fffd5a15500] initialised in src/main.cpp:10 main
+    {
+    size           = 5
+    head           = 0x55f5beafa5c0
+    tail           = 0x55f5beafa600
+        {
+         ptr            | prev           | next           | elem
+         0x55f5beafa5c0 |          (nil) | 0x55f5beafa5e0 | 0
+         0x55f5beafa5e0 | 0x55f5beafa5c0 | 0x55f5beafa820 | 10
+         0x55f5beafa820 | 0x55f5beafa5e0 | 0x55f5beafa800 | 20
+         0x55f5beafa800 | 0x55f5beafa820 | 0x55f5beafa600 | 15
+         0x55f5beafa600 | 0x55f5beafa800 |          (nil) | 20
+        }
+    }
+</pre>
+<img src="2.svg">
+<pre>
+    list_dump() called from src/main.cpp:37 main
+    list[0x7fffd5a15500] initialised in src/main.cpp:10 main
+    {
+    size           = 11
+    head           = 0x55f5beafa8e0
+    tail           = 0x55f5beafa600
+        {
+         ptr            | prev           | next           | elem
+         0x55f5beafa8e0 |          (nil) | 0x55f5beafa5c0 | -10
+         0x55f5beafa5c0 | 0x55f5beafa8e0 | 0x55f5beafa5e0 | 0
+         0x55f5beafa5e0 | 0x55f5beafa5c0 | 0x55f5beafa880 | 10
+         0x55f5beafa880 | 0x55f5beafa5e0 | 0x55f5beafa8a0 | 70
+         0x55f5beafa8a0 | 0x55f5beafa880 | 0x55f5beafa8c0 | 80
+         0x55f5beafa8c0 | 0x55f5beafa8a0 | 0x55f5beafa860 | 90
+         0x55f5beafa860 | 0x55f5beafa8c0 | 0x55f5beafa840 | 60
+         0x55f5beafa840 | 0x55f5beafa860 | 0x55f5beafa820 | 50
+         0x55f5beafa820 | 0x55f5beafa840 | 0x55f5beafa800 | 20
+         0x55f5beafa800 | 0x55f5beafa820 | 0x55f5beafa600 | 15
+         0x55f5beafa600 | 0x55f5beafa800 |          (nil) | 20
+        }
+    }
+</pre>
+<img src="3.svg">

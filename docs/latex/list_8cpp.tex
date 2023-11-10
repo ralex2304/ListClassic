@@ -17,13 +17,13 @@ int \mbox{\hyperlink{list_8cpp_a1c37e2961f9fcde212a162bf7f140a65}{list\+\_\+dtor
 \begin{DoxyCompactList}\small\item\em \doxylink{struct_list}{List} destructor. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{list_8cpp_ad2c70c7438bd41ec12cd63929d7df6af}{list\+\_\+find\+\_\+by\+\_\+logical\+\_\+index}} (const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, ssize\+\_\+t logical\+\_\+i, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}ptr)
 \begin{DoxyCompactList}\small\item\em Returns ptr to element with specified logical index. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{list_8cpp_af87392ca793af929e03f36ada3040557}{list\+\_\+find\+\_\+by\+\_\+value}} (const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, const \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}} elem, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}ptr)
+int \mbox{\hyperlink{list_8cpp_af87392ca793af929e03f36ada3040557}{list\+\_\+find\+\_\+by\+\_\+value}} (const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, const \mbox{\hyperlink{list_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}} elem, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}ptr)
 \begin{DoxyCompactList}\small\item\em Returns ptr to element with given value (the first one) \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{list_8cpp_a1d80483635eacd81c0041345ac3de6dd}{list\+\_\+logical\+\_\+index\+\_\+by\+\_\+ptr}} (const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, const \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}ptr, ssize\+\_\+t \texorpdfstring{$\ast$}{*}logical\+\_\+i)
 \begin{DoxyCompactList}\small\item\em Returns logical index of element with specified ptr. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{list_8cpp_ac3a60d10288b6644fecc60698a3f677c}{list\+\_\+verify}} (const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list)
 \begin{DoxyCompactList}\small\item\em (Use macros LIST\+\_\+\+VERIFY) Verifies list data and fields \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\+\_\+insert\+\_\+after}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}ptr, const \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}} elem, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}inserted\+\_\+ptr)
+int \mbox{\hyperlink{list_8cpp_ab45707f9c641fad6effefd9132f49359}{list\+\_\+insert\+\_\+after}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}ptr, const \mbox{\hyperlink{list_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}} elem, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}inserted\+\_\+ptr)
 \begin{DoxyCompactList}\small\item\em Inserts element after ptr. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{list_8cpp_ad9425a856821bef757338345ab40772d}{list\+\_\+delete}} (\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}ptr)
 \begin{DoxyCompactList}\small\item\em Deletes element by physical index. \end{DoxyCompactList}\item 
@@ -110,7 +110,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00203}{203}} of file \mbox
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list__config_8h_source_l00049}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00165}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8cpp_source_l00179}{list\+\_\+delete()}}, \mbox{\hyperlink{list_8h_source_l00178}{LIST\+\_\+\+OK}}, and \mbox{\hyperlink{list__config_8h_source_l00052}{List\+::size}}.
+References \mbox{\hyperlink{list_8h_source_l00056}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00262}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8cpp_source_l00179}{list\+\_\+delete()}}, \mbox{\hyperlink{list_8h_source_l00275}{LIST\+\_\+\+OK}}, and \mbox{\hyperlink{list_8h_source_l00059}{List\+::size}}.
 
 
 
@@ -145,7 +145,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00012}{12}} of file \mbox{
 \DoxyCodeLine{00014\ }
 \DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ res\ =\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a7ddc74ddbf0fe8b3bf62e124db8fc755}{OK}};}
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{list_8cpp_a1da8f93cab0619a776cee4162271a3c9}{CHECK\_AND\_RETURN}}(\mbox{\hyperlink{list__config_8h_afa3f98187627cf2e4259b5fec1f4509c}{list\_is\_initialised}}(list),\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a1390fde7e8c9486eabcc721f7daaffac}{ALREADY\_INITIALISED}});}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{list_8cpp_a1da8f93cab0619a776cee4162271a3c9}{CHECK\_AND\_RETURN}}(\mbox{\hyperlink{list_8h_afa3f98187627cf2e4259b5fec1f4509c}{list\_is\_initialised}}(list),\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a1390fde7e8c9486eabcc721f7daaffac}{ALREADY\_INITIALISED}});}
 \DoxyCodeLine{00018\ }
 \DoxyCodeLine{00019\ \ \ \ \ list-\/>\mbox{\hyperlink{struct_list_a1b69e23ea4ca60dad8bf2895194fbe67}{size}}\ =\ 0;}
 \DoxyCodeLine{00020\ }
@@ -155,7 +155,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00012}{12}} of file \mbox{
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list__config_8h_source_l00040}{List\+::\+ALREADY\+\_\+\+INITIALISED}}, \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8h_source_l00165}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list__config_8h_source_l00067}{list\+\_\+is\+\_\+initialised()}}, \mbox{\hyperlink{list__config_8h_source_l00037}{List\+::\+OK}}, and \mbox{\hyperlink{list__config_8h_source_l00052}{List\+::size}}.
+References \mbox{\hyperlink{list_8h_source_l00047}{List\+::\+ALREADY\+\_\+\+INITIALISED}}, \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8h_source_l00262}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8h_source_l00074}{list\+\_\+is\+\_\+initialised()}}, \mbox{\hyperlink{list_8h_source_l00044}{List\+::\+OK}}, and \mbox{\hyperlink{list_8h_source_l00059}{List\+::size}}.
 
 
 
@@ -198,7 +198,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00216}{216}} of file \mbox
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list_8cpp_source_l00012}{list\+\_\+ctor()}}, and \mbox{\hyperlink{list__config_8h_source_l00055}{List\+::var\+\_\+data}}.
+References \mbox{\hyperlink{list_8cpp_source_l00012}{list\+\_\+ctor()}}, and \mbox{\hyperlink{list_8h_source_l00062}{List\+::var\+\_\+data}}.
 
 \Hypertarget{list_8cpp_ad9425a856821bef757338345ab40772d}\label{list_8cpp_ad9425a856821bef757338345ab40772d} 
 \index{list.cpp@{list.cpp}!list\_delete@{list\_delete}}
@@ -253,7 +253,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00179}{179}} of file \mbox
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list__config_8h_source_l00019}{List\+Node\+::elem}}, \mbox{\hyperlink{macros_8h_source_l00010}{FREE}}, \mbox{\hyperlink{list__config_8h_source_l00049}{List\+::head}}, \mbox{\hyperlink{list__config_8h_source_l00045}{List\+::\+INVALID\+\_\+\+PTR\+\_\+\+GIVEN}}, \mbox{\hyperlink{list_8h_source_l00165}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list__config_8h_source_l00021}{List\+Node\+::next}}, \mbox{\hyperlink{list__config_8h_source_l00015}{List\+Node\+::\+POISON}}, \mbox{\hyperlink{list__config_8h_source_l00017}{List\+Node\+::prev}}, \mbox{\hyperlink{list__config_8h_source_l00052}{List\+::size}}, and \mbox{\hyperlink{list__config_8h_source_l00050}{List\+::tail}}.
+References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8h_source_l00026}{List\+Node\+::elem}}, \mbox{\hyperlink{macros_8h_source_l00010}{FREE}}, \mbox{\hyperlink{list_8h_source_l00056}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00052}{List\+::\+INVALID\+\_\+\+PTR\+\_\+\+GIVEN}}, \mbox{\hyperlink{list_8h_source_l00262}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8h_source_l00028}{List\+Node\+::next}}, \mbox{\hyperlink{list_8h_source_l00022}{List\+Node\+::\+POISON}}, \mbox{\hyperlink{list_8h_source_l00024}{List\+Node\+::prev}}, \mbox{\hyperlink{list_8h_source_l00059}{List\+::size}}, and \mbox{\hyperlink{list_8h_source_l00057}{List\+::tail}}.
 
 
 
@@ -297,7 +297,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00024}{24}} of file \mbox{
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list_8cpp_source_l00203}{list\+\_\+clear()}}, \mbox{\hyperlink{list_8h_source_l00178}{LIST\+\_\+\+OK}}, \mbox{\hyperlink{list_8h_source_l00158}{LIST\+\_\+\+VERIFY}}, \mbox{\hyperlink{list__config_8h_source_l00052}{List\+::size}}, and \mbox{\hyperlink{list__config_8h_source_l00033}{List\+::\+UNITIALISED\+\_\+\+VAL}}.
+References \mbox{\hyperlink{list_8cpp_source_l00203}{list\+\_\+clear()}}, \mbox{\hyperlink{list_8h_source_l00275}{LIST\+\_\+\+OK}}, \mbox{\hyperlink{list_8h_source_l00255}{LIST\+\_\+\+VERIFY}}, \mbox{\hyperlink{list_8h_source_l00059}{List\+::size}}, and \mbox{\hyperlink{list_8h_source_l00040}{List\+::\+UNITIALISED\+\_\+\+VAL}}.
 
 
 
@@ -337,13 +337,13 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00035}{35}} of file \mbox{
 \DoxyCodeLine{00041\ }
 \DoxyCodeLine{00042\ \ \ \ \ *ptr\ =\ list-\/>\mbox{\hyperlink{struct_list_a6c5449b1dd158368840801d0cdc86f5e}{head}};}
 \DoxyCodeLine{00043\ \ \ \ \ ssize\_t\ log\_i\ =\ 0;}
-\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{list__config_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ *ptr,\ log\_i)\ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{list_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ *ptr,\ log\_i)\ \{}
 \DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (logical\_i-\/-\/\ ==\ 0)\ \{}
 \DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
 \DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00048\ \ \ \ \ \}}
 \DoxyCodeLine{00049\ }
-\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{list__config_8h_acb92b54ac93a0bb337c095461c2c559b}{LIST\_IS\_FOREACH\_VALID}}(*list,\ log\_i,\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{list_8h_acb92b54ac93a0bb337c095461c2c559b}{LIST\_IS\_FOREACH\_VALID}}(*list,\ log\_i,\ \{}
 \DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ res\ |=\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a0eb2ab0412846e18e047041f3dec6336}{DAMAGED\_PATH}};}
 \DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{list_8h_a8c7f1eb5f65ba70b67c29452244e8f58}{LIST\_OK}}(list,\ res);}
 \DoxyCodeLine{00053\ \ \ \ \ \});}
@@ -356,13 +356,13 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00035}{35}} of file \mbox{
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list__config_8h_source_l00046}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list__config_8h_source_l00049}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00165}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list__config_8h_source_l00072}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list__config_8h_source_l00075}{LIST\+\_\+\+IS\+\_\+\+FOREACH\+\_\+\+VALID}}, \mbox{\hyperlink{list_8h_source_l00178}{LIST\+\_\+\+OK}}, and \mbox{\hyperlink{list__config_8h_source_l00052}{List\+::size}}.
+References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8h_source_l00053}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list_8h_source_l00056}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00262}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8h_source_l00079}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list_8h_source_l00082}{LIST\+\_\+\+IS\+\_\+\+FOREACH\+\_\+\+VALID}}, \mbox{\hyperlink{list_8h_source_l00275}{LIST\+\_\+\+OK}}, and \mbox{\hyperlink{list_8h_source_l00059}{List\+::size}}.
 
 \Hypertarget{list_8cpp_af87392ca793af929e03f36ada3040557}\label{list_8cpp_af87392ca793af929e03f36ada3040557} 
 \index{list.cpp@{list.cpp}!list\_find\_by\_value@{list\_find\_by\_value}}
 \index{list\_find\_by\_value@{list\_find\_by\_value}!list.cpp@{list.cpp}}
 \doxysubsubsection{\texorpdfstring{list\_find\_by\_value()}{list\_find\_by\_value()}}
-{\footnotesize\ttfamily int list\+\_\+find\+\_\+by\+\_\+value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{const \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}}}]{elem,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int list\+\_\+find\+\_\+by\+\_\+value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{const \mbox{\hyperlink{list_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}}}]{elem,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{ptr }\end{DoxyParamCaption})}
 
 
 
@@ -395,13 +395,13 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00060}{60}} of file \mbox{
 \DoxyCodeLine{00066\ }
 \DoxyCodeLine{00067\ \ \ \ \ *ptr\ =\ list-\/>\mbox{\hyperlink{struct_list_a6c5449b1dd158368840801d0cdc86f5e}{head}};}
 \DoxyCodeLine{00068\ \ \ \ \ ssize\_t\ log\_i\ =\ 0;}
-\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{list__config_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ *ptr,\ log\_i)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{list_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ *ptr,\ log\_i)\ \{}
 \DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((*ptr)-\/>elem\ ==\ elem)\ \{}
 \DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
 \DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00073\ \ \ \ \ \}}
 \DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{list__config_8h_acb92b54ac93a0bb337c095461c2c559b}{LIST\_IS\_FOREACH\_VALID}}(*list,\ log\_i,\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{list_8h_acb92b54ac93a0bb337c095461c2c559b}{LIST\_IS\_FOREACH\_VALID}}(*list,\ log\_i,\ \{}
 \DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ res\ |=\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a0eb2ab0412846e18e047041f3dec6336}{DAMAGED\_PATH}};}
 \DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{list_8h_a8c7f1eb5f65ba70b67c29452244e8f58}{LIST\_OK}}(list,\ res);}
 \DoxyCodeLine{00078\ \ \ \ \ \});}
@@ -414,13 +414,13 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00060}{60}} of file \mbox{
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list__config_8h_source_l00046}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list__config_8h_source_l00049}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00165}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list__config_8h_source_l00072}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list__config_8h_source_l00075}{LIST\+\_\+\+IS\+\_\+\+FOREACH\+\_\+\+VALID}}, \mbox{\hyperlink{list_8h_source_l00178}{LIST\+\_\+\+OK}}, \mbox{\hyperlink{list__config_8h_source_l00015}{List\+Node\+::\+POISON}}, and \mbox{\hyperlink{list__config_8h_source_l00043}{List\+::\+POISON\+\_\+\+VAL\+\_\+\+FOUND}}.
+References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8h_source_l00053}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list_8h_source_l00056}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00262}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8h_source_l00079}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list_8h_source_l00082}{LIST\+\_\+\+IS\+\_\+\+FOREACH\+\_\+\+VALID}}, \mbox{\hyperlink{list_8h_source_l00275}{LIST\+\_\+\+OK}}, \mbox{\hyperlink{list_8h_source_l00022}{List\+Node\+::\+POISON}}, and \mbox{\hyperlink{list_8h_source_l00050}{List\+::\+POISON\+\_\+\+VAL\+\_\+\+FOUND}}.
 
 \Hypertarget{list_8cpp_ab45707f9c641fad6effefd9132f49359}\label{list_8cpp_ab45707f9c641fad6effefd9132f49359} 
 \index{list.cpp@{list.cpp}!list\_insert\_after@{list\_insert\_after}}
 \index{list\_insert\_after@{list\_insert\_after}!list.cpp@{list.cpp}}
 \doxysubsubsection{\texorpdfstring{list\_insert\_after()}{list\_insert\_after()}}
-{\footnotesize\ttfamily int list\+\_\+insert\+\_\+after (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{const \mbox{\hyperlink{list__config_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}}}]{elem,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{inserted\+\_\+ptr }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int list\+\_\+insert\+\_\+after (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_list}{List}} \texorpdfstring{$\ast$}{*}}]{list,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{const \mbox{\hyperlink{list_8h_a080be3bdb852e7fe4ae09e67e3f7012c}{Elem\+\_\+t}}}]{elem,  }\item[{\mbox{\hyperlink{struct_list_node}{List\+Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{inserted\+\_\+ptr }\end{DoxyParamCaption})}
 
 
 
@@ -484,11 +484,11 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00144}{144}} of file \mbox
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list__config_8h_source_l00019}{List\+Node\+::elem}}, \mbox{\hyperlink{list__config_8h_source_l00049}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00165}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list__config_8h_source_l00021}{List\+Node\+::next}}, \mbox{\hyperlink{list__config_8h_source_l00017}{List\+Node\+::prev}}, \mbox{\hyperlink{list__config_8h_source_l00052}{List\+::size}}, and \mbox{\hyperlink{list__config_8h_source_l00050}{List\+::tail}}.
+References \mbox{\hyperlink{list_8h_source_l00026}{List\+Node\+::elem}}, \mbox{\hyperlink{list_8h_source_l00056}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00262}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8h_source_l00028}{List\+Node\+::next}}, \mbox{\hyperlink{list_8h_source_l00024}{List\+Node\+::prev}}, \mbox{\hyperlink{list_8h_source_l00059}{List\+::size}}, and \mbox{\hyperlink{list_8h_source_l00057}{List\+::tail}}.
 
 
 
-Referenced by \mbox{\hyperlink{list_8h_source_l00053}{list\+\_\+insert\+\_\+before()}}, \mbox{\hyperlink{list_8h_source_l00065}{list\+\_\+pushback()}}, and \mbox{\hyperlink{main_8cpp_source_l00006}{main()}}.
+Referenced by \mbox{\hyperlink{list_8h_source_l00124}{list\+\_\+insert\+\_\+before()}}, \mbox{\hyperlink{list_8h_source_l00136}{list\+\_\+pushback()}}, and \mbox{\hyperlink{main_8cpp_source_l00006}{main()}}.
 
 \Hypertarget{list_8cpp_a1d80483635eacd81c0041345ac3de6dd}\label{list_8cpp_a1d80483635eacd81c0041345ac3de6dd} 
 \index{list.cpp@{list.cpp}!list\_logical\_index\_by\_ptr@{list\_logical\_index\_by\_ptr}}
@@ -526,14 +526,14 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00085}{85}} of file \mbox{
 \DoxyCodeLine{00090\ }
 \DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ cur\_ptr\ =\ list-\/>\mbox{\hyperlink{struct_list_a6c5449b1dd158368840801d0cdc86f5e}{head}};}
 \DoxyCodeLine{00092\ \ \ \ \ ssize\_t\ log\_i\ =\ 0;}
-\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{list__config_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ cur\_ptr,\ log\_i)\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{list_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ cur\_ptr,\ log\_i)\ \{}
 \DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cur\_ptr\ ==\ ptr)\ \{}
 \DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ *logical\_i\ =\ log\_i;}
 \DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ res;}
 \DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{00098\ \ \ \ \ \}}
 \DoxyCodeLine{00099\ }
-\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{list__config_8h_acb92b54ac93a0bb337c095461c2c559b}{LIST\_IS\_FOREACH\_VALID}}(*list,\ log\_i,\ \{}
+\DoxyCodeLine{00100\ \ \ \ \ \mbox{\hyperlink{list_8h_acb92b54ac93a0bb337c095461c2c559b}{LIST\_IS\_FOREACH\_VALID}}(*list,\ log\_i,\ \{}
 \DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ res\ |=\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a0eb2ab0412846e18e047041f3dec6336}{DAMAGED\_PATH}};}
 \DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{list_8h_a8c7f1eb5f65ba70b67c29452244e8f58}{LIST\_OK}}(list,\ res);}
 \DoxyCodeLine{00103\ \ \ \ \ \});}
@@ -546,7 +546,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00085}{85}} of file \mbox{
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list__config_8h_source_l00046}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list__config_8h_source_l00049}{List\+::head}}, \mbox{\hyperlink{list__config_8h_source_l00045}{List\+::\+INVALID\+\_\+\+PTR\+\_\+\+GIVEN}}, \mbox{\hyperlink{list_8h_source_l00165}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list__config_8h_source_l00072}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list__config_8h_source_l00075}{LIST\+\_\+\+IS\+\_\+\+FOREACH\+\_\+\+VALID}}, and \mbox{\hyperlink{list_8h_source_l00178}{LIST\+\_\+\+OK}}.
+References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8h_source_l00053}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list_8h_source_l00056}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00052}{List\+::\+INVALID\+\_\+\+PTR\+\_\+\+GIVEN}}, \mbox{\hyperlink{list_8h_source_l00262}{LIST\+\_\+\+ASSERT}}, \mbox{\hyperlink{list_8h_source_l00079}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list_8h_source_l00082}{LIST\+\_\+\+IS\+\_\+\+FOREACH\+\_\+\+VALID}}, and \mbox{\hyperlink{list_8h_source_l00275}{LIST\+\_\+\+OK}}.
 
 \Hypertarget{list_8cpp_ac3a60d10288b6644fecc60698a3f677c}\label{list_8cpp_ac3a60d10288b6644fecc60698a3f677c} 
 \index{list.cpp@{list.cpp}!list\_verify@{list\_verify}}
@@ -577,7 +577,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00112}{112}} of file \mbox
 \DoxyCodeLine{00114\ }
 \DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ res\ =\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a7ddc74ddbf0fe8b3bf62e124db8fc755}{OK}};}
 \DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{list_8cpp_a1da8f93cab0619a776cee4162271a3c9}{CHECK\_AND\_RETURN}}(!\mbox{\hyperlink{list__config_8h_afa3f98187627cf2e4259b5fec1f4509c}{list\_is\_initialised}}(list),\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308aeb600b154b5ad58a45c0d326d5ec6f9d}{UNITIALISED}});}
+\DoxyCodeLine{00117\ \ \ \ \ \mbox{\hyperlink{list_8cpp_a1da8f93cab0619a776cee4162271a3c9}{CHECK\_AND\_RETURN}}(!\mbox{\hyperlink{list_8h_afa3f98187627cf2e4259b5fec1f4509c}{list\_is\_initialised}}(list),\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308aeb600b154b5ad58a45c0d326d5ec6f9d}{UNITIALISED}});}
 \DoxyCodeLine{00118\ }
 \DoxyCodeLine{00119\ \ \ \ \ \mbox{\hyperlink{list_8cpp_a0f2905892855073ba849455a73cd569b}{CHECK\_ERR\_}}(list-\/>\mbox{\hyperlink{struct_list_a1b69e23ea4ca60dad8bf2895194fbe67}{size}}\ <\ 0,\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a4c24649940a61f8bac3fa7226641b4f0}{NEGATIVE\_SIZE}});}
 \DoxyCodeLine{00120\ }
@@ -585,7 +585,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00112}{112}} of file \mbox
 \DoxyCodeLine{00122\ }
 \DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{struct_list_node}{ListNode}}*\ ptr\ =\ list-\/>\mbox{\hyperlink{struct_list_a6c5449b1dd158368840801d0cdc86f5e}{head}};}
 \DoxyCodeLine{00124\ \ \ \ \ ssize\_t\ log\_i\ =\ 0;}
-\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{list__config_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ ptr,\ log\_i)\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \mbox{\hyperlink{list_8h_a71e56f93847137d416cc8a5bb1599ea8}{LIST\_FOREACH}}(*list,\ ptr,\ log\_i)\ \{}
 \DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{ptr__valid_8h_a9118aa9878b41057b6d2067e5d5dff2b}{is\_ptr\_valid}}(ptr))\ \{}
 \DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ res\ |=\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308ad38df98dc967b08df38a8a8593682cf1}{INVALID\_NODE\_PTR}};}
 \DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ res\ |=\ list-\/>\mbox{\hyperlink{struct_list_adc4de19193966dec2119e6af8ae34308a0eb2ab0412846e18e047041f3dec6336}{DAMAGED\_PATH}};}
@@ -606,7 +606,7 @@ Definition at line \mbox{\hyperlink{list_8cpp_source_l00112}{112}} of file \mbox
 \end{DoxyCode}
 
 
-References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8cpp_source_l00110}{CHECK\+\_\+\+ERR\+\_\+}}, \mbox{\hyperlink{list__config_8h_source_l00046}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list__config_8h_source_l00019}{List\+Node\+::elem}}, \mbox{\hyperlink{list__config_8h_source_l00049}{List\+::head}}, \mbox{\hyperlink{list__config_8h_source_l00042}{List\+::\+INVALID\+\_\+\+NODE\+\_\+\+PTR}}, \mbox{\hyperlink{ptr__valid_8h_a9118aa9878b41057b6d2067e5d5dff2b}{is\+\_\+ptr\+\_\+valid()}}, \mbox{\hyperlink{list__config_8h_source_l00072}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list__config_8h_source_l00067}{list\+\_\+is\+\_\+initialised()}}, \mbox{\hyperlink{list__config_8h_source_l00044}{List\+::\+NEGATIVE\+\_\+\+SIZE}}, \mbox{\hyperlink{list__config_8h_source_l00037}{List\+::\+OK}}, \mbox{\hyperlink{list__config_8h_source_l00015}{List\+Node\+::\+POISON}}, \mbox{\hyperlink{list__config_8h_source_l00043}{List\+::\+POISON\+\_\+\+VAL\+\_\+\+FOUND}}, \mbox{\hyperlink{list__config_8h_source_l00017}{List\+Node\+::prev}}, \mbox{\hyperlink{list__config_8h_source_l00052}{List\+::size}}, and \mbox{\hyperlink{list__config_8h_source_l00041}{List\+::\+UNITIALISED}}.
+References \mbox{\hyperlink{list_8cpp_source_l00005}{CHECK\+\_\+\+AND\+\_\+\+RETURN}}, \mbox{\hyperlink{list_8cpp_source_l00110}{CHECK\+\_\+\+ERR\+\_\+}}, \mbox{\hyperlink{list_8h_source_l00053}{List\+::\+DAMAGED\+\_\+\+PATH}}, \mbox{\hyperlink{list_8h_source_l00026}{List\+Node\+::elem}}, \mbox{\hyperlink{list_8h_source_l00056}{List\+::head}}, \mbox{\hyperlink{list_8h_source_l00049}{List\+::\+INVALID\+\_\+\+NODE\+\_\+\+PTR}}, \mbox{\hyperlink{ptr__valid_8h_a9118aa9878b41057b6d2067e5d5dff2b}{is\+\_\+ptr\+\_\+valid()}}, \mbox{\hyperlink{list_8h_source_l00079}{LIST\+\_\+\+FOREACH}}, \mbox{\hyperlink{list_8h_source_l00074}{list\+\_\+is\+\_\+initialised()}}, \mbox{\hyperlink{list_8h_source_l00051}{List\+::\+NEGATIVE\+\_\+\+SIZE}}, \mbox{\hyperlink{list_8h_source_l00044}{List\+::\+OK}}, \mbox{\hyperlink{list_8h_source_l00022}{List\+Node\+::\+POISON}}, \mbox{\hyperlink{list_8h_source_l00050}{List\+::\+POISON\+\_\+\+VAL\+\_\+\+FOUND}}, \mbox{\hyperlink{list_8h_source_l00024}{List\+Node\+::prev}}, \mbox{\hyperlink{list_8h_source_l00059}{List\+::size}}, and \mbox{\hyperlink{list_8h_source_l00048}{List\+::\+UNITIALISED}}.
 
 
 

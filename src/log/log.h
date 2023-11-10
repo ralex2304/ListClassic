@@ -12,6 +12,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 
+#include "../utils/text/text_lib.h"
+
 #ifdef _WIN32
 #include<windows.h>
 #endif

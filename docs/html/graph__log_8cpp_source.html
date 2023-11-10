@@ -101,18 +101,21 @@ $(document).ready(function(){initNavTree('graph__log_8cpp_source.html',''); init
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span>    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">size_t</span> MAX_COMMAND_LEN = 256;</div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">char</span> command[MAX_COMMAND_LEN] = {};</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    strcat(command, <span class="stringliteral">&quot;dot -Tsvg &quot;</span>);</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    strcat(command, input_filename);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    strcat(command, <span class="stringliteral">&quot; &gt; &quot;</span>);</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    strcat(command, output_filename);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <a class="code hl_function" href="text__lib_8cpp.html#abe1b59a7bb5e8a59513928094867ca90">strncat_len</a>(command, <span class="stringliteral">&quot;dot -Tsvg &quot;</span>, MAX_COMMAND_LEN);</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_function" href="text__lib_8cpp.html#abe1b59a7bb5e8a59513928094867ca90">strncat_len</a>(command, input_filename, MAX_COMMAND_LEN);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_function" href="text__lib_8cpp.html#abe1b59a7bb5e8a59513928094867ca90">strncat_len</a>(command, <span class="stringliteral">&quot; &gt; &quot;</span>, MAX_COMMAND_LEN);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="text__lib_8cpp.html#abe1b59a7bb5e8a59513928094867ca90">strncat_len</a>(command, output_filename, MAX_COMMAND_LEN);</div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">if</span> (system(command) != 0)</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordflow">if</span> (system(command) != 0) {</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>        fprintf(stderr, <span class="stringliteral">&quot;Error executing \&quot;%s\&quot;\n&quot;</span>, command);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    }</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>}</div>
 <div class="ttc" id="agraph__log_8cpp_html_a7638af32477a4647619469c995c46edc"><div class="ttname"><a href="graph__log_8cpp.html#a7638af32477a4647619469c995c46edc">create_img</a></div><div class="ttdeci">bool create_img(const char *input_filename, const char *output_filename)</div><div class="ttdef"><b>Definition</b> <a href="graph__log_8cpp_source.html#l00003">graph_log.cpp:3</a></div></div>
 <div class="ttc" id="agraph__log_8h_html"><div class="ttname"><a href="graph__log_8h.html">graph_log.h</a></div></div>
+<div class="ttc" id="atext__lib_8cpp_html_abe1b59a7bb5e8a59513928094867ca90"><div class="ttname"><a href="text__lib_8cpp.html#abe1b59a7bb5e8a59513928094867ca90">strncat_len</a></div><div class="ttdeci">size_t strncat_len(char *dest, const char *src, const ssize_t max_len)</div><div class="ttdef"><b>Definition</b> <a href="text__lib_8cpp_source.html#l00003">text_lib.cpp:3</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

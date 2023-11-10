@@ -1,8 +1,10 @@
-#include "dump.h"
+#include "list.h"
 
 extern LogFileData log_file;
 
 #define LOG_(...) log_printf(&log_file, __VA_ARGS__)
+
+#ifdef DEBUG
 
 void list_dump(const List* list, const VarCodeData call_data) {
     assert(list);
@@ -22,7 +24,7 @@ void list_dump(const List* list, const VarCodeData call_data) {
     LOG_("        {\n");
 
     if (!is_ptr_valid(list->head)) {
-        if (list_is_initialised(list))
+        if (!list_is_initialised(list))
             LOG_(HTML_RED("        can't read (invalid pointer)\n"));
 
         LOG_("        }\n"
@@ -60,13 +62,14 @@ bool list_dump_dot(const List* list, char* img_filename) {
 
     assert(list);
 
-    char dot_filename[log_file.MAX_FILENAME_LEN] = {};
-
     static size_t dot_number = 0;
 
-    strcat (dot_filename, log_file.timestamp_dir);
-    sprintf(dot_filename + strlen(dot_filename), "%zd", dot_number);
-    strcat (dot_filename, ".dot");
+    char dot_filename[log_file.MAX_FILENAME_LEN] = {};
+
+    size_t str_len = strncat_len(dot_filename, log_file.timestamp_dir, log_file.MAX_FILENAME_LEN);
+    snprintf(dot_filename + str_len, log_file.MAX_FILENAME_LEN - str_len,
+             "%zd", dot_number);
+    str_len = strncat_len(dot_filename, ".dot", log_file.MAX_FILENAME_LEN);
 
     FILE* file = fopen(dot_filename, "wb");
     if (file == nullptr)
@@ -129,9 +132,9 @@ bool list_dump_dot(const List* list, char* img_filename) {
         return false;
     }
 
-    strcat (img_filename, log_file.timestamp_dir);
-    sprintf(img_filename + strlen(img_filename), "%zd", dot_number++);
-    strcat (img_filename, ".svg");
+    str_len = strncat_len(img_filename, log_file.timestamp_dir, log_file.MAX_FILENAME_LEN);
+    snprintf(img_filename + str_len, log_file.MAX_FILENAME_LEN - str_len, "%zd", dot_number++);
+    str_len = strncat_len(img_filename, ".svg", log_file.MAX_FILENAME_LEN);
 
     if (!create_img(dot_filename, img_filename)) {
         fprintf(stderr, "Error creating dot graph\n");
@@ -141,6 +144,8 @@ bool list_dump_dot(const List* list, char* img_filename) {
     return true;
 }
 #undef FPRINTF_
+
+#endif //< #ifdef DEBUG
 
 #define PRINT_ERR_(code, descr)  if ((err_code) & List::code)                                       \
                                     log_printf(&log_file,                                           \

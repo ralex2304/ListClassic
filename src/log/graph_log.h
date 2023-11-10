@@ -5,6 +5,8 @@
 #include <string.h>
 #include <assert.h>
 
+#include "../utils/text/text_lib.h"
+
 bool create_img(const char* input_filename, const char* output_filename);
 
 #endif //< #ifndef GRAPH_LOG_H_

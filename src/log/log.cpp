@@ -34,8 +34,8 @@ bool log_open_file(LogFileData* log_file, const char* mode) {
 
     char filename[log_file->MAX_FILENAME_LEN] = {};
 
-    strcat(filename, log_file->timestamp_dir);
-    strcat(filename, "log.html");
+    strncat_len(filename, log_file->timestamp_dir, log_file->MAX_FILENAME_LEN);
+    strncat_len(filename, "log.html", log_file->MAX_FILENAME_LEN);
 
     log_file->file = fopen(filename, mode);
 
@@ -51,18 +51,16 @@ bool log_create_timestamp_dir(LogFileData* log_file) {
     assert(log_file);
 
     if (log_file->timestamp_dir[0] == '\0') {
-        time_t ltime;
-        ltime = time(NULL);
-        struct tm *tm;
-        tm = localtime(&ltime);
+        time_t ltime = time(NULL);
+        tm* tm = localtime(&ltime);
 
-        strcpy(log_file->timestamp_dir, log_file->dir);
-        strcat(log_file->timestamp_dir, "/");
+        size_t str_len = strncat_len(log_file->timestamp_dir, log_file->dir, log_file->MAX_FILENAME_LEN);
+        str_len = strncat_len(log_file->timestamp_dir, "/", log_file->MAX_FILENAME_LEN);
 
-        sprintf(log_file->timestamp_dir + strlen(log_file->timestamp_dir),
+        snprintf(log_file->timestamp_dir + str_len, log_file->MAX_FILENAME_LEN - str_len,
                 "%02d-%02d-%04d_%02d-%02d-%02d", tm->tm_mday, tm->tm_mon, tm->tm_year + 1900,
-                                                tm->tm_hour, tm->tm_min, tm->tm_sec);
-        strcat(log_file->timestamp_dir, "/");
+                                                 tm->tm_hour, tm->tm_min, tm->tm_sec);
+        str_len = strncat_len(log_file->timestamp_dir, "/", log_file->MAX_FILENAME_LEN);
     }
 
     if (!log_create_dir(log_file->timestamp_dir))
@@ -94,7 +92,7 @@ bool log_create_dir(const char* dir_name) {
             return false;
         }
 #else //< #ifndef _WIN32
-        if (mkdir(dir_name, 0700) != 0) {
+        if (mkdir(dir_name, 0744) != 0) {
             perror("Error creating dir");
             return false;
         }
